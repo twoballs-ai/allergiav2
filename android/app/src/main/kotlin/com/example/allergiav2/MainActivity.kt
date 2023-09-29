@@ -1,4 +1,4 @@
-package com.example.allergiav2
+package com.example.allergia
 
 import io.flutter.embedding.android.FlutterActivity
 

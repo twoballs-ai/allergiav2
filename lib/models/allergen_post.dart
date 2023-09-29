@@ -14,10 +14,12 @@ part 'allergen_post.g.dart';
 @JsonSerializable()
 class AllergenPost {
   AllergenPost({
+    required this.pk,
     required this.name,
     required this.carriers,
   });
 
+  int pk;
   String name;
   List<Carrier> carriers;
 

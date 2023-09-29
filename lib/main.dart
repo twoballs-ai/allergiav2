@@ -1,5 +1,10 @@
-import 'package:allergiav2/screens/home_screen.dart';
+import 'package:allergia/authentication/auth.dart';
+import 'package:allergia/authentication/register.dart';
+import 'package:allergia/landing.dart';
+import 'package:allergia/screens/home_screen.dart';
+import 'package:allergia/screens/wrapper.dart';
 import 'package:flutter/material.dart';
+import 'package:allergia/screens/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,10 +15,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: _title,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Landing(),
+        '/login': (context) => LoginScreen(),
+        '/register': (context) => RegisterScreen(),
+        '/wrapper': (context) => Wrapper(),
+      },
     );
   }
 }

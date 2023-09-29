@@ -1,4 +1,4 @@
-# allergiav2
+# allergia
 
 A new Flutter project.
 

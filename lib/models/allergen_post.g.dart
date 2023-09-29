@@ -7,6 +7,7 @@ part of 'allergen_post.dart';
 // **************************************************************************
 
 AllergenPost _$AllergenPostFromJson(Map<String, dynamic> json) => AllergenPost(
+      pk: json['pk'] as int,
       name: json['name'] as String,
       carriers: (json['carriers'] as List<dynamic>)
           .map((e) => Carrier.fromJson(e as Map<String, dynamic>))
@@ -15,6 +16,7 @@ AllergenPost _$AllergenPostFromJson(Map<String, dynamic> json) => AllergenPost(
 
 Map<String, dynamic> _$AllergenPostToJson(AllergenPost instance) =>
     <String, dynamic>{
+      'pk': instance.pk,
       'name': instance.name,
       'carriers': instance.carriers,
     };
